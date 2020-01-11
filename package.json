@@ -1,0 +1,30 @@
+{
+  "name": "sten-extensions",
+  "displayName": "sten extension",
+  "description": "sten extensions",
+  "version": "0.0.1",
+  "publisher": "abaktiar",
+  "icon": "assets/images/node-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abaktiar/vs-code-extensions.git"
+  },
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./src/snippets/node-snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./src/snippets/node-snippets.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "Servic Class": {
+    "prefix": ["sc", "service class"],
+    "body": [
+      "import BaseService from '../policies/BaseService';",
+      "import { $2 } from '../models/dbtypes';",
+      "import { db } from '../models/db';",
+      "",
+      "export class $1Service extends BaseService {",
+      "\tconstructor() {",
+      "\t\tsuper();",
+      "\t}",
+      "\t$3",
+      "}"
+    ],
+    "description": "Create a Service Class"
+  },
+  "Service Method": {
+    "prefix": ["sm", "service method"],
+    "body": [
+      "${1:myMethod} = async ($2) => {",
+      "\ttry {",
+      "\t\t$3",
+      "\t} catch (error) {",
+      "\t\tthis.log.error(error);",
+      "\t\tthrow error;",
+      "\t}",
+      "};"
+    ],
+    "description": "Create a service method"
+  },
+  "Controller Class": {
+    "prefix": ["cc", "controller class"],
+    "body": [
+      "import BaseController from '../policies/BaseController';",
+      "import { Request, Response, Next } from 'restify';",
+      "$2",
+      "export class $1Controller extends BaseController {",
+      "\tconstructor($3) {",
+      "\t\tsuper();",
+      " \t}",
+      "\t$4",
+      "}"
+    ],
+    "description": "Create a Controller Class"
+  },
+  "Controller Method": {
+    "prefix": ["cm", "controller method"],
+    "body": [
+      "${1:myMethod} = async (req: Request, res: Response, next: Next) => {",
+      "\ttry {",
+      "\t\t$2",
+      "\t} catch (error) {",
+      "\t\tthis.ErrorResult(error, req, res, next);",
+      "\t}",
+      "};"
+    ],
+    "description": "Create a controller method"
+  }
+}
